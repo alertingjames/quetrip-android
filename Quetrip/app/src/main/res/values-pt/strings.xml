@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quetrip</string>
+
+    <string name="Andaraí">Andaraí</string>
+    <string name="Ibicoara">Ibicoara</string>
+    <string name="Igatu">Igatu</string>
+    <string name="Iraquara">Iraquara</string>
+    <string name="Itaete">Itaetê</string>
+    <string name="Linen">Lençois</string>
+    <string name="Hill_of_the_Hat">Morro do Chapéu</string>
+    <string name="Mucuge">Mucugê</string>
+    <string name="New_Redemption">Nova Redenção</string>
+    <string name="Palm_trees">Palmeiras</string>
+    <string name="Piatan">Piatã</string>
+    <string name="Rio_de_Contas">Rio de Contas</string>
+    <string name="Capão_Valley">Vale do Capão</string>
+
+    <string name="paved_road">Estrada pavimentada</string>
+    <string name="dirt_road">Estrada de terra</string>
+
+</resources>

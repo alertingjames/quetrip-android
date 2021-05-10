@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/cancelicon"
+                android:tint="@color/text"/>
+            <TextView
+                android:id="@+id/titleBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/text"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/settings"/>
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#F5F5F5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/caption1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingLeft="25dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/language"
+                        android:textColor="#616161"
+                        android:textSize="14sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="50dp"
+                        android:layout_marginBottom="30dp">
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <RadioButton
+                                android:id="@+id/pt"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingLeft="10dp"
+                                android:buttonTint="@color/text"
+                                android:drawableRight="@drawable/ic_portuguese"
+                                android:drawablePadding="20dp"
+                                android:text="@string/portuguese"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="50dp"
+                                android:layout_height="1.5dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/gray"/>
+                            <RadioButton
+                                android:id="@+id/es"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingLeft="10dp"
+                                android:buttonTint="@color/text"
+                                android:drawableRight="@drawable/ic_spanish"
+                                android:drawablePadding="20dp"
+                                android:text="@string/spanish"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="50dp"
+                                android:layout_height="1.5dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/gray"/>
+                            <RadioButton
+                                android:id="@+id/en"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingLeft="10dp"
+                                android:buttonTint="@color/text"
+                                android:drawableRight="@drawable/ic_english"
+                                android:drawablePadding="20dp"
+                                android:text="@string/english"/>
+                        </RadioGroup>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#F5F5F5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="25dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/my_location"
+                    android:textColor="#616161"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <Switch
+                        android:id="@+id/locationSetting"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="15dp"
+                        android:switchPadding="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/keep_my_location_centered_always" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#F5F5F5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="25dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/map_view"
+                    android:textColor="#616161"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Switch
+                        android:id="@+id/mapviewSetting"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="15dp"
+                        android:switchPadding="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/satellite_mode" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#F5F5F5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/loading_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#CDFFFFFF">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:indicator="BallSpinFadeLoader"
+            app:indicator_color="#F53700" />
+
+    </FrameLayout>
+
+</FrameLayout>

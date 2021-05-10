@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "263639319613",
+    "firebase_url": "https://quetrip-260515.firebaseio.com",
+    "project_id": "quetrip-260515",
+    "storage_bucket": "quetrip-260515.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263639319613:android:1034e87c8db1b61407d654",
+        "android_client_info": {
+          "package_name": "com.app.quetrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263639319613-2r384e6430p93jegp2943sqa12i87k1g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.quetrip",
+            "certificate_hash": "e96408ec5f8aa3b994849b8fb0bab087e6b67c7b"
+          }
+        },
+        {
+          "client_id": "263639319613-qelgnrpc0vp31jm7o0ksjtg7cr87juvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC49viNs1_Y4ep4W0fVmKsOpRpPvnU69hs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263639319613-qelgnrpc0vp31jm7o0ksjtg7cr87juvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

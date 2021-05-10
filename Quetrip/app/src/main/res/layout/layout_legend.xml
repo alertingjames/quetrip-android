@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/white_rect_fill"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="#1F4421"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/paved_road"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:text="@string/dirt_road"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/text"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/ok"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#950B0F</color>
+    <color name="colorPrimaryDark">#6B0407</color>
+    <color name="colorAccent">#E91E1E</color>
+
+    <color name="lightPrimary">#83950B0F</color>
+
+    <color name="text">#1F1F1F</color>
+    <color name="green">#39ac73</color>
+    <color name="dark_green">#1E774A</color>
+    <color name="gray">#C2C2C2</color>
+    <color name="blue">#0280d2</color>
+
+    <color name="text_enabled">@color/colorPrimary</color>
+    <color name="text_disabled">@color/lightPrimary</color>
+
+    <color name="black_20">#33000000</color>
+
+    <color name="custom_header_text">#030303</color>
+
+    <color name="calendar_selected_day_bg">#ffcf40</color>
+    <color name="calendar_selected_range_bg">#ffcf40</color>
+    <color name="dateTimeRangePickerStateToday">#ffcf40</color>
+
+    <color name="circle_fill_color">#3066cfff</color>
+    <color name="circle_stroke_color">#bd5cc6ff</color>
+
+</resources>

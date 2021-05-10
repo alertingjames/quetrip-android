@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="12dp"
+    android:background="#F8F8F8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="15dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/pictureBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/iquazu"
+                android:scaleType="centerCrop"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameBox"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/text"
+                android:text="Iquazu Falls"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:text="@string/city_"/>
+
+                    <TextView
+                        android:id="@+id/cityNameBox"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:layout_marginLeft="3dp"
+                        android:text="Iquazu"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:text="@string/distance_"/>
+
+                    <TextView
+                        android:id="@+id/distanceBox"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:layout_marginLeft="3dp"
+                        android:text="4km"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:text="@string/price_"/>
+
+                    <TextView
+                        android:id="@+id/priceBox"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:layout_marginLeft="3dp"
+                        android:text="50 USD"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:text="@string/walking_"/>
+
+                    <TextView
+                        android:id="@+id/walkingBox"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:layout_marginLeft="3dp"
+                        android:text="5km"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:text="@string/difficulty_"/>
+
+                    <TextView
+                        android:id="@+id/difficultyBox"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:layout_marginLeft="3dp"
+                        android:text="Medium"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:text="@string/departure_time_"/>
+
+                    <TextView
+                        android:id="@+id/departureBox"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:layout_marginLeft="3dp"
+                        android:text="8:00 AM"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:text="@string/total_time_"/>
+
+                    <TextView
+                        android:id="@+id/totalTimeBox"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:textColor="@color/text"
+                        android:layout_marginLeft="3dp"
+                        android:text="4hours"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/restaurant_desc"
+                android:singleLine="true"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/read_more"
+        android:gravity="right"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:padding="3dp"
+        android:visibility="gone"
+        android:drawableRight="@drawable/ic_right"/>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:padding="3dp"
+                android:tint="@color/text"
+                android:src="@drawable/time"/>
+
+            <TextView
+                android:id="@+id/dateBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/text"
+                android:text="Dec 10"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/yearBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:layout_marginRight="30dp"
+                android:text="2019"/>
+
+            <ImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cancelicon"
+                android:padding="5dp"
+                android:visibility="invisible"
+                android:tint="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/city_to_stay"
+                android:textSize="12sp"
+                android:textColor="@color/text"
+                android:paddingLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/daysBox"
+                android:layout_width="0px"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:gravity="right"
+                android:paddingRight="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/days_stay_in_city"
+                android:textSize="12sp"
+                android:paddingRight="10dp"
+                android:textColor="@color/text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/cityPictureBox"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/morro_do_chapeu"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="5dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/cityNameBox"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/text"
+                android:textSize="18sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:text="@string/Hill_of_the_Hat"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_add_attractions"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-condensed"
+                android:background="@drawable/primary_stroke"
+                android:gravity="center"
+                android:text="@string/add_attractions"
+                android:drawableTop="@drawable/ic_attractions"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/btn_add_hotel"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-condensed"
+                android:background="@drawable/primary_stroke"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/add_hotel"
+                android:drawableTop="@drawable/ic_hotel"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/btn_add_restaurant"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:fontFamily="sans-serif-condensed"
+                android:background="@drawable/primary_stroke"
+                android:layout_marginLeft="5dp"
+                android:textSize="9sp"
+                android:gravity="center"
+                android:text="@string/add_restaurant"
+                android:drawableTop="@drawable/ic_restaurant"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/btn_add_services"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-condensed"
+                android:background="@drawable/primary_stroke"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/add_services"
+                android:drawableTop="@drawable/ic_service"
+                android:drawableTint="@color/colorPrimary"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/lb_attractions"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/attractions"
+            android:textColor="@color/text"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_attractions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/lb_hotels"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hotels"
+            android:textColor="@color/text"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_hotels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/lb_restaurants"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/restaurants"
+            android:textColor="@color/text"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_restaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/lb_services"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/services"
+            android:textColor="@color/text"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_services"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dayNumBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/primary_rect_fill"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="Day 5"/>
+
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

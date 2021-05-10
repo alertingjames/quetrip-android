@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/white_rect_fill"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="18dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/book_now"
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:drawableTint="@color/text"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/rightarrow"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="#E9E9E9"/>
+
+        <TextView
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="18dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@string/delete"
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:drawableTint="@color/text"
+            android:drawablePadding="20dp"
+            android:drawableRight="@drawable/cancelicon2"/>
+
+    </LinearLayout>
+
+</FrameLayout>

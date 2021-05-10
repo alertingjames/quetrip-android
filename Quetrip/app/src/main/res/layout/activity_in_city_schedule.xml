@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/activity"
+    tools:context=".main.InCityScheduleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/toolbar"
+            android:layout_height="70dp"
+            android:background="@drawable/toolbar_shadow"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/cancelicon"
+                android:tint="@color/text"
+                android:padding="5dp"
+                android:onClick="back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/how_many_days_in_city"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="8dp"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:text="@string/save"
+                android:onClick="saveCitySchedule"
+                android:textAllCaps="true"
+                android:textColor="@color/text"/>
+
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0px"
+                    android:layout_height="0px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mytrip"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textColor="@color/text"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tripTimeBox"
+                            android:textColor="@color/text"
+                            android:text="Dec 8, 2019 - Dec 13, 2019"
+                            android:padding="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5dp"
+                            android:background="@color/gray"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tripDaysBox"
+                        android:layout_width="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:gravity="center"
+                        android:layout_marginLeft="30dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="#303030"
+                        android:layout_height="wrap_content"
+                        android:text="days"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="8dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/cityPictureBox"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/morro_do_chapeu"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="5dp"
+                        android:layout_gravity="center_vertical"/>
+
+                    <TextView
+                        android:id="@+id/cityNameBox"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/Hill_of_the_Hat"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="3dp"
+                        android:background="@drawable/ic_time"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/in_city"
+                        android:textColor="@color/text"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:textColor="@color/text"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/all_days"/>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_all_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:gravity="right"
+                    android:padding="15dp"
+                    android:text="@string/or"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/from_to"
+                            android:paddingLeft="30dp"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/timePortion"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/from_to"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="10dp"
+                                android:textSize="16sp"
+                                android:textColor="#303030"
+                                android:layout_height="wrap_content"
+                                android:text="Dec 10, 2019 ~ Dec 10, 2019"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:drawableRight="@drawable/downarrow"
+                                android:drawablePadding="10dp"
+                                android:background="@drawable/gray_round_stroke"
+                                android:gravity="center"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/howlong"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/text"/>
+
+                                <TextView
+                                    android:id="@+id/daysBox"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:textSize="14sp"
+                                    android:textColor="#303030"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/days"
+                                    android:layout_marginLeft="15dp"
+                                    android:gravity="center"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/btn_sel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_edit_schedule"
+                            android:tint="@color/white"
+                            app:backgroundTint="@color/colorPrimary"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="5dp"
+                            android:onClick="toEditInScheduleCity"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/white"/>
+
+        <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loading_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:indicator="LineScaleParty"
+        app:indicator_color="#F53700" />
+</FrameLayout>

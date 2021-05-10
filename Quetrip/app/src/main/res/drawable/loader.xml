@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/andarai"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/ibicoara"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/igatu"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/iraquara"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/lencois"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/morro_do_chapeu"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/itaete"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/palmeiras"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/mucuge"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/piata"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/rio_de_contas"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/new_redemption"
+        android:duration="5000"/>
+    <item android:drawable="@drawable/vale_do_capao"
+        android:duration="5000"/>
+</animation-list>

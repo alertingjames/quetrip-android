@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<androidx.cardview.widget.CardView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:layout_marginBottom="15dp"
+		app:cardCornerRadius="4dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<com.makeramen.roundedimageview.RoundedImageView
+				android:id="@+id/pictureBox"
+				android:layout_width="match_parent"
+				android:layout_height="200dp"
+				android:scaleType="centerCrop"
+				android:adjustViewBounds="true"
+				android:src="@drawable/ibicoara"
+				app:riv_corner_radius_top_left="4dp"
+				app:riv_corner_radius_top_right="4dp"/>
+
+			<TextView
+				android:id="@+id/nameBox"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:fontFamily="sans-serif-light"
+				android:textSize="16sp"
+				android:textColor="@color/text"
+				android:paddingTop="15dp"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:textStyle="bold"
+				android:gravity="center"
+				android:lines="2"
+				android:text="Breakfast included Prodigy Hotel Santos Dumont Airport"
+				android:ellipsize="end"/>
+
+			<TextView
+				android:id="@+id/descriptionBox"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:fontFamily="sans-serif-light"
+				android:textSize="14sp"
+				android:textColor="@color/text"
+				android:paddingTop="10dp"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+				android:paddingBottom="15dp"
+				android:lines="2"
+				android:text="Breakfast included Prodigy Hotel Santos Dumont Airport"
+				android:ellipsize="end"/>
+
+		</LinearLayout>
+
+	</androidx.cardview.widget.CardView>
+
+</FrameLayout>
+
+
+
+
+

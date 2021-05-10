@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ScheduledRestaurantDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1">
+
+            ​<com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:background="@null">
+                ​
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/collapsing"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:title="@string/browse_menu"
+                    app:expandedTitleMarginStart="30dp"
+                    app:expandedTitleMarginEnd="30dp"
+                    app:expandedTitleTextAppearance="@style/CollapsingTextAppearance.Inverse"
+                    app:layout_scrollFlags="scroll">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_collapseMode="parallax"
+                        tools:ignore="ContentDescription">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:background="#FAFAFA">
+
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/viewPager0"
+                                android:layout_width="match_parent"
+                                android:layout_height="0px"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                        <com.viewpagerindicator.LinePageIndicator
+                            android:id="@+id/indicator"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="2dp"
+                            app:strokeWidth="3dp"
+                            app:unselectedColor="@color/gray"
+                            app:selectedColor="@color/colorPrimary"/>
+
+                        <com.github.mmin18.widget.RealtimeBlurView
+                            android:id="@+id/real_time_blur_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fitsSystemWindows="true"
+                            app:realtimeBlurRadius="20dp"
+                            android:visibility="gone"
+                            app:realtimeOverlayColor="@android:color/transparent" />
+
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@null"
+                        style="@style/ToolBarWithNavigationBack3"
+                        android:layout_marginTop="20dp"
+                        android:visibility="visible"
+                        app:layout_collapseMode="pin">
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="2dp"
+                android:background="@color/white"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    app:layout_scrollFlags="scroll">
+
+                    <TextView
+                        android:id="@+id/nameBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textSize="22sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Marcel Restaurant"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/text"
+                                android:text="@string/city_"/>
+
+                            <TextView
+                                android:id="@+id/cityNameBox"
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/text"
+                                android:layout_marginLeft="3dp"
+                                android:text="Sao Paulo"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/text"
+                                android:text="@string/distance_"/>
+
+                            <TextView
+                                android:id="@+id/distanceBox"
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/text"
+                                android:layout_marginLeft="3dp"
+                                android:text="4km"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/green"
+                                android:layout_marginLeft="3dp"
+                                android:text="@string/see_on_map"
+                                android:onClick="viewLocation"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/text"
+                                android:text="@string/status_"/>
+
+                            <TextView
+                                android:id="@+id/statusBox"
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/text"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="3dp"
+                                android:text="Open Now"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/green"
+                                android:layout_marginLeft="3dp"
+                                android:text="@string/see_hours"
+                                android:onClick="viewHours"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/text"
+                                android:text="@string/price_"/>
+
+                            <TextView
+                                android:id="@+id/priceBox"
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/text"
+                                android:layout_marginLeft="3dp"
+                                android:text="15 - 150 USD"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/text"
+                                android:text="@string/cuisines_"/>
+
+                            <TextView
+                                android:id="@+id/cuisineBox"
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="3dp"
+                                android:textColor="@color/text"
+                                android:text="French, Europian"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/text"
+                                android:text="@string/meals_"/>
+
+                            <TextView
+                                android:id="@+id/mealBox"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="3dp"
+                                android:textColor="@color/text"
+                                android:text="Lunch, Dinner"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textColor="@color/text"
+                                android:text="@string/phone"/>
+
+                            <TextView
+                                android:id="@+id/phoneBox"
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/text"
+                                android:layout_marginLeft="3dp"
+                                android:text="+58 XXX XXXX"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/green"
+                                android:layout_marginLeft="3dp"
+                                android:text="@string/contact_"
+                                android:onClick="contact"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <RatingBar
+                                android:id="@+id/ratingbar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:rating="4.2"
+                                android:stepSize="0.1"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:max="5"
+                                android:numStars="5"
+                                android:isIndicator="true"
+                                android:layout_gravity="center_vertical"
+                                android:progressTint="#FFC107"
+                                android:secondaryProgressTint="#ccb59e"/>
+
+                            <TextView
+                                android:id="@+id/ratingsBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/text"
+                                android:textSize="16sp"
+                                android:text="4.2"/>
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_account"
+                                android:layout_marginLeft="15dp"/>
+
+                            <TextView
+                                android:id="@+id/reviewsBox"
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/text"
+                                android:textSize="16sp"
+                                android:layout_marginLeft="2dp"
+                                android:hint="10"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:fontFamily="sans-serif-condensed"
+                                android:layout_gravity="center_vertical"
+                                android:textSize="16sp"
+                                android:textColor="@color/green"
+                                android:layout_marginLeft="3dp"
+                                android:text="@string/see_reviews"
+                                android:onClick="viewFeedback"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="25dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/more"
+                        android:layout_gravity="left"
+                        android:textSize="14sp"
+                        android:background="@drawable/primary_rect_fill"
+                        android:textColor="@color/white"
+                        android:onClick="viewMore"/>
+
+                    <com.abdulhakeem.seemoretextview.SeeMoreTextView
+                        android:id="@+id/descriptionBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:textColor="@color/text"
+                        android:text="@string/restaurant_desc"
+                        android:fontFamily="sans-serif-condensed-light"
+                        android:lineSpacingExtra="8dp"
+                        android:textSize="16sp"
+                        android:singleLine="false"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="25dp"
+                            android:fontFamily="sans-serif-condensed-medium"
+                            android:textColor="@color/text"
+                            android:text="@string/menus"/>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:padding="3dp"
+                            android:onClick="addNewMenu"
+                            android:layout_marginRight="15dp"
+                            android:src="@drawable/ic_plus"/>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical"/>
+                    ​
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/ic_checked"
+                android:tint="@color/colorPrimary"
+                app:backgroundTint="@color/white"
+                app:layout_anchor="@id/scrollView"
+                app:layout_anchorGravity="top|right|end"
+                tools:ignore="RtlHardcoded" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

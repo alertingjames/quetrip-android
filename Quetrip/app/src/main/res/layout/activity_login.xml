@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:scaleType="centerCrop"
+        android:tint="#4A000000"
+        android:src="@drawable/bg_login"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:text="QueTrip!"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_marginTop="100dp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom">
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:id="@+id/btn_facebook"
+                android:layout_gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/blue_round_fill">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/fbicon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/login_facebook"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/flb"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal">
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="220dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"/>
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:id="@+id/btn_google"
+                android:layout_gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/blue_round_fill">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/google"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/login_google"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/glb"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="100dp"
+            android:layout_gravity="center_horizontal">
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:id="@+id/btn_email"
+                android:layout_gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/blue_round_fill">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_mail"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/login_email"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/elb"/>
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#CDFFFFFF">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:indicator="BallSpinFadeLoader"
+            app:indicator_color="#F53700" />
+
+    </FrameLayout>
+
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
